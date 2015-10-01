@@ -1,6 +1,6 @@
 { div, a, h1 } = React.DOM
 
-@BlogLayout = React.createClass
+@Layout = React.createClass
   render: ->
     div {},
       div className: "navigation",
