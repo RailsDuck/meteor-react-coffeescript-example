@@ -1,6 +1,7 @@
 { div, a, h3, p } = React.DOM
 
-@PostPage = React.createClass
+@PostPage = React.createFactory React.createClass
+  displayName: 'PostPage'
   mixins: [ReactMeteorData]
 
   getMeteorData: ->
