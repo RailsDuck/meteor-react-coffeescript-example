@@ -1,6 +1,6 @@
 { div, ul, li, a } = React.DOM
 
-@PostList = React.createFactory React.createClass
+@PostList = Component.create
   displayName: 'PostList'
   mixins: [ReactMeteorData]
 

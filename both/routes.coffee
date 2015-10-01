@@ -1,10 +1,10 @@
 FlowRouter.route "/",
   action: ->
     ReactLayout.render BlogLayout,
-      content: PostList({})
+      content: PostList {}
 
 FlowRouter.route '/post/:_id',
   name: 'post'
   action: (params) ->
     ReactLayout.render BlogLayout,
-      content: PostPage({ _id: params._id })
+      content: PostPage { _id: params._id }
