@@ -24,3 +24,14 @@
           li key: task._id,
             a href: path,
               task.title
+              
+@PostsAbout = Component.create
+  displayName: "PostList"
+  mixins: [ReactMeteorData]
+  
+  getMeteorData: ->
+    selector = { category: { $ne: "private" } }
+    handle = Meteor.subscribe 'posts', selector
+    data = {}
+    if handle.ready()
+        data.post = Posts.find ({}, {sort: _id: 2}).fetch()
